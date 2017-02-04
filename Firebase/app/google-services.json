@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "563853574189",
+    "firebase_url": "https://fir-sample-e9865.firebaseio.com",
+    "project_id": "fir-sample-e9865",
+    "storage_bucket": "fir-sample-e9865.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:563853574189:android:efc49030e9e60a88",
+        "android_client_info": {
+          "package_name": "sadboy.firebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "563853574189-m8o86fu1upg8h6keqh617ls6645mqict.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCD1C8-4gw-DvLbEG4tF3ZFIHDTTs-aB-I"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
