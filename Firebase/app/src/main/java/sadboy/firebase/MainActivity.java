@@ -22,16 +22,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        title = (TextView)findViewById(R.id.title);
-        mFirebaseInstance = FirebaseDatabase.getInstance();
+        title = (TextView) findViewById(R.id.title);
 
-        mFirebaseDatabase = mFirebaseInstance.getReference("hey");
-        mFirebaseInstance.getReference("new_title").setValue("Realtime Database");
-        mFirebaseInstance.getReference("new_title").addValueEventListener(new ValueEventListener() {
+        mFirebaseInstance = FirebaseDatabase.getInstance();
+        mFirebaseDatabase = mFirebaseInstance.getReference();
+
+        mFirebaseDatabase.child("new_title").setValue("Realtime Database");
+        mFirebaseDatabase.child("new_title").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-
-                String appTitle = dataSnapshot.getValue(String.class);
+                String appTitle = dataSnapshot.getValue().toString();
                 Log.e("Hey", appTitle);
                 title.setText(appTitle);
             }
@@ -42,7 +42,5 @@ public class MainActivity extends AppCompatActivity {
                 Log.e("Hey", "Failed to read app title value.", error.toException());
             }
         });
-
-
     }
 }
